@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/login-style.css">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <title>Login Form</title>
+</head>
+
+<body>
+</body>
+
+<div class="form-container">
+  <!-- Signup Section -->
+  <header>Signup</header>
+  <form>
+    <div class="input-field">
+      <input type="email" name="email" required>
+      <label>Email</label>
+    </div>
+    <div class="input-field">
+      <input type="text" name="userName" required>
+      <label>Username</label>
+    </div>
+    <div class="input-field">
+      <input type="password" name="password" required class="pswrd">
+      <span class="show-password">SHOW</span>
+      <label>Password</label>
+    </div>
+    <div class="input-field">
+      <input type="password" name="confPassword" required class="confPassword">
+      <span class="show-password showConfPassword">SHOW</span>
+      <label>Confirm Password</label>
+    </div>
+    <div class="button">
+      <!-- <div class="inner"></div> -->
+      <button>Signup</button>
+    </div>
+  </form>
+
+  <!-- Login Section -->
+  <div>
+    have an account?
+    <a href="login.html">Login</a>
+  </div>
+
+  <script>
+    let password = document.querySelector('.pswrd'),
+      confPassword = document.querySelector('.confPassword'),
+      showPassword = document.querySelector('.show-password'),
+      showConfPassword = document.querySelector('span.show-password.showConfPassword');
+
+
+    showPassword.addEventListener('click', () => {
+      if (password.type === 'password') {
+        password.type = 'text';
+        showPassword.style.color = '#1da1f2';
+        showPassword.innerHTML = 'HIDE';
+      } else {
+        password.type = 'password';
+        showPassword.style.color = '#111';
+        showPassword.innerHTML = 'SHOW';
+      }
+    });
+
+    showConfPassword.addEventListener('click', () => {
+      if (confPassword.type === 'password') {
+        confPassword.type = 'text';
+        showConfPassword.style.color = '#1da1f2';
+        showConfPassword.innerHTML = 'HIDE';
+      } else {
+        confPassword.type = 'password';
+        showConfPassword.style.color = '#111';
+        showConfPassword.innerHTML = 'SHOW';
+      }
+    });
+  </script>
+</div>
+
+</html>

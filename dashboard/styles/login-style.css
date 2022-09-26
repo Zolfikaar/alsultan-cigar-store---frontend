@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans&family=Open+Sans:wght@700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  background: #f6f6f9; /* url(images/bg.jpg); */
+  background-size: cover;
+  background-position: center;
+}
+.form-container{
+  position: relative;
+  width: 400px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 7px 25px rgba(0,0,0,.08);
+}
+header{
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form .button{
+  margin-top: 30px;
+}
+.input-field, form .button{
+  margin: 10px 25px;
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+.input-field input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid silver;
+  padding-left: 15px;
+  outline: none;
+  font-size: 19px;
+  transition: .3s;
+}
+.input-field input:focus{
+  border: 1px solid #1da1f2;
+}
+.input-field label, span.show-password{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input-field label{
+  left: 15px;
+  font-size: 18px;
+  color: gray;
+  pointer-events: none;
+  transition: .3s;
+}
+span.show-password{
+  right: 20px;
+  color: #111;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: -webkit-none;
+  user-select: none;
+  visibility: hidden;
+}
+input:valid ~ span.show-password{visibility: visible;}
+input:focus ~ label,
+input:valid ~ label{
+  transform: translateY(-33px);
+  background: white;
+  font-size: 16px;
+  color: #1da1f2;
+}
+.button button{
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-size: 200%;
+  background-image: linear-gradient(to left, #00dbde, #fc00ff, #00dbde);
+  /* linear-gradient(to left, #00dbde, #fc00ff, #00dbde); */
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: all .3s;
+}
+.button button:hover{
+  background-position: right;
+}
+
+.signup-wrapper{
+  margin-top: 30px;
+  position: relative;
+}
+.signup-wrapper .auth{
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  font-size: 19px;
+  color: gray;
+  text-align: center;
+  padding: 0 10px;
+}
+.links{
+  display: flex;
+  cursor: pointer;
+  margin: 50px 0 30px 0;
+}
+.links .facebook{border: 1px solid #4267b2;}
+.links .google{border: 1px solid #dd4b39;}
+.links .facebook,.links .google{
+  height: 40px;
+  width: 100%;
+  border-radius: 3px;
+  margin: 0 10px;
+  padding: 0 10px;
+  position: relative;
+  transition: .3s;
+}
+.facebook:hover{background:  #4267b2;}
+.google:hover{background: #dd4b39;}
+.facebook i, .facebook span{color: #4267b2;}
+.google i, .google span{color: #dd4b39;}
+.facebook:hover i,.facebook:hover span{color: white;}
+.google:hover i,.google:hover span{color: white;}
+.links i{
+  font-size: 23px;
+  line-height: 40px;
+  margin: 0 9px;
+}
+.links span{
+  position: absolute;
+  line-height: 40px;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+}
+.signup-wrapper .signup{
+  font-family: 'Noto Sans', sans-serif;
+  margin: 20px;
+}
+.signup-wrapper .signup a{
+  color: #1da1f2;
+  text-decoration: none;
+}
+.signup-wrapper .signup a:hover{
+  text-decoration: underline;
+}

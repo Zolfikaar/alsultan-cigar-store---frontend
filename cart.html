@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>السلطان للسيكار | المتجر</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <!-- rtl bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-OXTEbYDqaX2ZY/BOaZV/yFGChYHtrXH2nyXJ372n2Y8abBhrqacCEe+3qhSHtLjy" crossorigin="anonymous">
+  <!-- boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="css/app.css">
+
+  <style>
+    /* to hide arrows */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    .quantity input {
+      width: 50px;
+      height: 40px;
+      font-size: 16px;
+      text-align: center;
+
+    }
+
+    .quantity {
+      display: inline-flex;
+      /* margin-left: 1rem; */
+      white-space: nowrap;
+    }
+
+    .quantity input.minus,
+    .quantity input.plus {
+      width: 30px;
+      height: 40px;
+      overflow: hidden;
+      position: relative;
+      background-color: #f9f9f9;
+      text-shadow: 1px 1px 1px #fff;
+      color: #666;
+      border: 1px solid #ddd;
+      text-transform: none;
+      font-weight: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar  -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"> السلطان للسيجار</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="index.html">الرئيسية</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="shop.html">المتجر</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              سيجار
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">كوبي</a></li>
+              <li><a class="dropdown-item" href="#">غير كوبي</a></li>
+              <li><a class="dropdown-item" href="#">سيجارلو</a></li>
+              <li><a class="dropdown-item" href="#">سيجار يومي</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">بكجات | تشكيلات</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              اكسسوارات
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">قطاعات</a></li>
+              <li><a class="dropdown-item" href="#">اجهزة ترطيب</a></li>
+              <li><a class="dropdown-item" href="#">ولاعات</a></li>
+              <li><a class="dropdown-item" href="#">منفظة | حامل</a></li>
+              <li><a class="dropdown-item" href="#">بوفيدا</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              بايب | ايگوز
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">بايب</a></li>
+              <li><a class="dropdown-item" href="#">تبغ البايب</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">ايگـوز</a></li>
+              <li><a class="dropdown-item" href="#">تبغ الايگـوز</a></li>
+            </ul>
+          </li>
+
+
+        </ul>
+        <form class="d-flex">
+
+          <i class='bx bx-search'></i>
+          <a href="cart.html"><i class='active bx bx-shopping-bag'></i></a>
+          <i class='bx bx-user'></i>
+
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Header -->
+  <section id="blog-home" class="container pt-5 mt-5">
+    <h2 class="font-weight-bold pt-5">سلة تسوق</h2>
+    <hr>
+  </section>
+
+  <!-- Cart Section -->
+  <section id="cart-container" class="container my-5">
+    <table width="100%">
+
+      <thead>
+        <tr>
+          <td>صورة</td>
+          <td>اسم</td>
+          <td>سعر</td>
+          <td>كمية</td>
+          <td>مجموع</td>
+          <td>حذف</td>
+        </tr>
+      </thead>
+
+      <tbody>
+
+
+
+      </tbody>
+
+    </table>
+  </section>
+
+  <!-- Cart Bottom Section -->
+  <section id="cart-bottom" class="container">
+    <div class="row">
+      <!-- Coupon Section -->
+      <!-- <div class="coupon col-lg-6 col-md-6 col-12 mb-4">
+        <div>
+          <h5>COUPON</h5>
+          <p>Enter your coupon code if you have one</p>
+          <input type="text" placeholder="Coupon Code">
+          <button>APPLY COUPON</button>
+        </div>
+      </div> -->
+
+      <!-- Total Section -->
+      <div class="total col-lg-6 col-md-6 col-12">
+
+      </div>
+
+    </div>
+  </section>
+  <!-- Footer Section -->
+  <footer class="mt-5 py-5">
+    <div class="row container mx-auto pt-5">
+      <div class="footer-one col-lg-3 col-md-6 col-12">
+        <!-- <img src="img/logo2.png"> -->
+        <a class="navbar-brand" href="#"> السلطان للسيجار</a>
+        <p class="pt-3">متجر السيجار الاول في العراق حيث تجدون اجود انواع السيجار الكوبي و غير الكوبي و مختلف
+          منتجات
+          التبوغ من ارقى المناشئ العالمية</p>
+      </div>
+      <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+        <h5 class="pb-2">روابط مفيدة</h5>
+        <ul class="featured-list text-uppercase list-unstyled">
+          <li><a href="#">المتجر</a></li>
+          <li><a href="#">سيجار</a></li>
+          <li><a href="#">بايب</a></li>
+          <li><a href="#">اكسسوارات</a></li>
+          <li><a href="#">اجهزة ترطيب</a></li>
+          <li><a href="#">بكجات | تشكيلات</a></li>
+          <li><a href="#">سيجار السنة</a></li>
+        </ul>
+      </div>
+      <div class="footer-one col-lg-3 col-md-6 col-12">
+        <h5 class="pb-2">تواصل معنا</h5>
+        <div>
+          <h6 class="text-uppercase">الفرع الاول</h6>
+          <p>بغداد - الكرادة - شارع الصناعة - بناية العلوية الطابق الثاني</p>
+          <p>(0770) 456-7890</p>
+          <p>(0780) 123-4567</p>
+        </div>
+        <div>
+          <h6 class="text-uppercase">الفرع الثاني</h6>
+          <p>بغداد - المنصور - بناية السنتر التركي الطابق الرابع</p>
+          <p>(0771) 456-7890</p>
+          <p>(0781) 444-7890</p>
+        </div>
+
+      </div>
+      <div class="footer-one col-lg-3 col-md-6 col-12">
+        <h5 class="pb-2">اخر المنشورات على انستجرام</h5>
+        <div class="row">
+          <img src="imgs/insta/1.jpg" class="img-fluid w-25 h-100 m-2">
+          <img src="imgs/insta/2.jpg" class="img-fluid w-25 h-100 m-2">
+          <img src="imgs/insta/3.jpg" class="img-fluid w-25 h-100 m-2">
+          <img src="imgs/insta/4.jpg" class="img-fluid w-25 h-100 m-2">
+          <img src="imgs/insta/5.jpg" class="img-fluid w-25 h-100 m-2">
+        </div>
+      </div>
+    </div>
+
+    <div class="payment-and-social-media container ">
+
+
+      <div class="payment">
+        <img src="imgs/payment.png">
+      </div>
+
+      <div class="social-links">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-tiktok'></i></a>
+      </div>
+
+
+
+    </div>
+  </footer>
+
+  <!-- Copyright Section -->
+  <div class="copyright container">
+    <div class="text-center mt-3 mx-auto ">
+      <p>Tholfikar Mohammed @ 2022. All rights reserved</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
+
+  <script src="js/cart-script.js"></script>
+</body>
+
+</html>

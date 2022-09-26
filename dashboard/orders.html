@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Dashboard-O2 v0.0.2</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Navigation | Side Bar -->
+    <div class="navigation">
+      <ul class="top-navs">
+        <li>
+          <a href="index.html">
+            <span class="icon">
+              <ion-icon name="flame"></ion-icon>
+            </span>
+            <span class="title">لوحة تحكم المتجر</span>
+          </a>
+        </li>
+        <li>
+          <a href="index.html">
+            <span class="icon">
+              <ion-icon name="home"></ion-icon>
+            </span>
+            <span class="title">الرئيسية</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="cube"></ion-icon>
+            </span>
+            <span class="title">الطلبيات</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="person"></ion-icon>
+            </span>
+            <span class="title">المستخدمين</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="pricetags"></ion-icon>
+            </span>
+            <span class="title">المنتج</span>
+          </a>
+        </li>
+        <!-- <li>
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="ticket"></ion-icon>
+            </span>
+            <span class="title">Offers</span>
+          </a>
+        </li>-->
+        <li>
+          <a href="#">
+            <span class="icon">
+
+              <ion-icon name="chatbox"></ion-icon>
+            </span>
+            <span class="title">الاقسام</span>
+          </a>
+        </li>
+
+      </ul>
+
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+      <!-- Top Bar -->
+      <div class="topbar">
+        <!-- Toggle button -->
+        <div class="toggle">
+          <ion-icon name="menu"></ion-icon>
+          <ion-icon name="close"></ion-icon>
+        </div>
+        <!-- Search field -->
+        <div class="search">
+          <label for="">
+            <input type="text" placeholder="Search">
+            <ion-icon name="search"></ion-icon>
+          </label>
+        </div>
+
+        <!-- User profile -->
+        <div class="user">
+
+          <!-- Theme Toggler -->
+          <div class="theme-toggler">
+            <span class="icon active">
+              <ion-icon name="sunny"></ion-icon>
+            </span>
+            <span class="icon">
+              <ion-icon name="moon"></ion-icon>
+            </span>
+          </div>
+
+          <div class="dropBox">
+
+            <div class="select-btn">
+              <span class="icon">
+
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </span>
+              <span class="user-name">المسؤول</span>
+              <div class="img-box"><img src="images/admin.jpg" alt=""></div>
+            </div>
+
+            <div class="result-box">
+              <div class="items">
+                <ul>
+                  <li><a href="https://ionic.io/ionicons">الاعدادت</a></li>
+                  <li><a href="">المساعدة و الدعم</a></li>
+                  <li><a href="">بنود الاستخدام</a></li>
+                  <hr>
+                  <li><a href="">تسجيل الخروج</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- <div class="user-dropdown">
+            <img src="images/admin.jpg" alt="user image">
+
+            <div class="dropdown ">
+              
+              <ul class="bottom-navs">
+                <li>
+                  <a href="#">
+                    <span class="icon">
+                      <ion-icon name="settings"></ion-icon>
+                    </span>
+                    <span class="title">Settings</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="icon">
+                      <ion-icon name="log-out"></ion-icon>
+                    </span>
+                    <span class="title">Sign Out</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="icon">
+                      <ion-icon name="help"></ion-icon>
+                    </span>
+                    <span class="title">Help</span>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/theme-script.js"></script>
+</body>
+
+</html>
